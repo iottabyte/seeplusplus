@@ -20,7 +20,7 @@
 
     output: course performance report
 
-/*
+*/
 
 // header files
 #include <iostream>
@@ -48,18 +48,18 @@ int main()
     // create faculty id
     fname[0] = tolower(fname[0]);    // [0] : selecting first char of string
     lname[0] = tolower(lname[0]);   // tolower : converting to lowercase
-    facultyId = fname[0] + lname;   // concatenate !!
+    facId = fname[0] + lname;   // concatenate !!
 
     // prompt user for number of students per letter grade
     cout << "\n\tNumber of A Students: ";
     cin >> aStu;
-    cout << "\t   \"    \" B    \"   : ";
+    cout << "\t   \"    \" B students: ";
     cin >> bStu;
-    cout << "\t   \"    \" C    \"   : ";
+    cout << "\t   \"    \" C students: ";
     cin >> cStu;
-    cout << "\t   \"    \" D    \"   : ";
+    cout << "\t   \"    \" D students: ";
     cin >> dStu;
-    cout << "\t   \"    \" F    \"   : ";
+    cout << "\t   \"    \" F students: ";
     cin >> fStu;
 
     // calculate percentage of passing, probationary, and failing students
