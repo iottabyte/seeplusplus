@@ -34,8 +34,13 @@ int main()
     cin >> a_tick;
     cout << "\tChild tickets sold: ";
     cin >> c_tick;
-    
+    cout < "\tProduction Company: ";
+    cin.ignore(); // flushing cin stream to extract strings again
+    getline(cin, company);
 
+    // calculations
+    gProfit = (AD_PRICE * a_tick) + (CH_PRICE = c_tick); 
+    
 
     return 0;
 }
