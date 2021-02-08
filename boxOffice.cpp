@@ -11,6 +11,7 @@
 
 // header files
 #include <iostream>
+#include <iomanip>
 #include <string>
 using namespace std;
 
@@ -40,7 +41,18 @@ int main()
 
     // calculations
     gProfit = (AD_PRICE * a_tick) + (CH_PRICE = c_tick); 
+    nProfit = gProfit * BOX_PERC / 100.0;
+    distAmt = gProfit - nProfit;
     
+    // display result
+    cout << endl << setw(30) << left << "Film Name: " << "\"" << film << "\"" << endl
+        << setw(30) << left << "Production Company: " << company << endl
+        << setw(30) << left << "Adult Tickets Sold: " << a_tick << endl
+        << setw(30) << left << "Child Tickets Sold: " << c_tick << endl
+        << fixed << showpoint << setprecision(2)
+        << setw(30) << left << "Gross Box Office Profit: " << "$ " << gProfit << endl
+        << setw(30) << left << "Net Box Office Profit: " << "$ " << nProfit << endl
+        << setw(30) << left << "Amount Paid to Distributor: " << "$ " << distAmt << endl;
 
     return 0;
 }
