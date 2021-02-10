@@ -28,7 +28,7 @@ int main()
 {
     // constants and variables
     const double PI = 3.141592
-    double diam, radius, circum, area, volume, surfArea;
+    double radius, diam, circum, area, volume, surfArea;
     
     // intro and data collection
     cout << "\nGeometry Calculator" << endl;
@@ -42,8 +42,20 @@ int main()
     volume = (4/3) * PI * pow(radius, 3.0);
     surfArea = 4 * PI * pow(radius, 2.0);
 
+    // formatting constants
+    const int LW = 30, RW = 10;     // left & right field widths
+
     // display results
-    
+    cout << fixed << showpoint << setprecision(4)
+
+    cout << setw(LW) << left << "Circumference of circle:"
+         << setw(RW) << right << circum << endl
+         << setw(LW) << left << "Area of circle:"
+         << setw(RW) << right << area << endl
+         << setw(LW) << left << "Volume of Sphere:"
+         << setw(RW) << right << volume << endl
+         << setw(LW) << left << "Surface Area of Sphere:"
+         << setw(RW) << right << surfArea << endl << endl;
 
     return 0;
 }
