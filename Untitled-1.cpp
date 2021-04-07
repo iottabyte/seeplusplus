@@ -1,3 +1,0 @@
-/*
-    Kim Claros
-/*
