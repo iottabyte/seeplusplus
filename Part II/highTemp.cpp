@@ -48,6 +48,7 @@ void readTemp(int[][DAYS]);
 int getWeek();
 int getDay();
 double calcAvgD(int[][DAYS], int);
+double calcAvgW(int[][DAYS], int);
 double calcAvgY(int[][DAYS]);
 
 int main()
@@ -89,7 +90,12 @@ int main()
 
 			break;
 		case 2:	// avg for week
-			;
+			cout << "\nAverage highest temperature for a week..." << endl;
+
+			// calculate average and display
+			average = calcAvgW(hiTemp, dayIdx);
+			cout << "\nThe average highest temperature for each week was " << average << endl;
+				
 			break;
 		case 3:	// avg for day
 			cout << "\nAverage highest temperature for a day..." << endl;
